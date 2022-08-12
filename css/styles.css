@@ -87,6 +87,11 @@ form {
   align-content: center;
   margin: 5px 0px;
   position: relative;
+  border-radius: 5px;
+}
+
+.card div {
+  z-index: 2;
 }
 
 .task {
@@ -127,6 +132,50 @@ form {
   font-size: 48px;
 }
 /* Javascript */
+.addTask {
+  animation-name: add;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes add {
+  from {
+    opacity: 0;
+  }
+
+  to {
+   opacity: 1;
+  }
+}
+
 .complete {
-  background-color: rgb(112, 221, 3);
+  animation-name: checked;
+  animation-duration: .4s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes checked {
+  from {
+    background-color: transparent;
+  }
+
+  to {
+    background-color: #70dd03;
+  }
+}
+
+.removeTask {
+  animation-name: remove;
+  animation-duration: .4s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes remove {
+  from {
+    background-color: transparent;
+  }
+
+  to {
+    background-color: #cb2929fc;
+  }
 }
